@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Clock!</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            background-color: #EFC050;
+            color: #363945;
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 35px;
+            font-size: 35px;
+        }
+        span{
+            margin-bottom: 10px;
+        }
+        h1{
+            font-size: 2.77vw;
+        }
+
+        @media screen and (max-width:600px) {
+            h1{
+                font-size: 5.77vw;
+            }
+            ul{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CURRENT TIME IN JS CLOCK:</h1>
+        <br>
+        <div class="time">
+            <ul>
+                <li><span id="hour">12</span>HOURS</li>
+                <li><span id="minute">34</span>MINUTES</li>
+                <li><span id="second">23</span>SECONDS</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            a = new Date()
+            hour = a.getHours()
+            minute = a.getMinutes()
+            second = a.getSeconds()
+            document.getElementById('hour').innerText = hour
+            document.getElementById('minute').innerText = minute
+            document.getElementById('second').innerText = second
+
+        }, 1000);
+    </script>
+</body>
+</html>
