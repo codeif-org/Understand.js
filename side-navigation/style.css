@@ -50,6 +50,7 @@ body {
   cursor: pointer;
   /* width: 100%; */
   margin: 32px;
+  transition: opacity 0.3s;
 }
 
 .bar1,
