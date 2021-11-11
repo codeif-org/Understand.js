@@ -4,7 +4,7 @@ console.log("added main.js");
 
 // Set the width of the side navigation to 30%
 function openNav() {
-    document.getElementById("mySidenav").style.width = "30%"
+    document.getElementById("mySidenav").style.width = "300px"
 }
 
 // Set the width of the side navigation to 0
